@@ -33,5 +33,7 @@ public:
 			cout << "\nStack is empty. Cannot pop. " << endl; //1.a
 			return; //1.b
 		}
+
+		cout << "\nthe popped element is: " << endl; //step 2
 	}
 };
