@@ -35,5 +35,6 @@ public:
 		}
 
 		cout << "\nthe popped element is: " << endl; //step 2
+		top--; //step 3 decrement
 	}
 };
