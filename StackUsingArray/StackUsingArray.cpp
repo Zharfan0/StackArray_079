@@ -93,24 +93,6 @@ int main() {
 				stack.pop();
 				cout << endl << "Data dengan nomor " << data << "berhasil dihapus" << endl;
 		}
-		break;
-		case '3':
-		{
-			stack.display();
-		}
-		break;
-
-		case '4':
-		{
-			exit(0);
-		}
-		break;
-		default:
-		{
-			cout << "Pilihan salah !!!" << endl;
-		}
-		break;
-		}
 
 	}
 }
