@@ -37,4 +37,9 @@ public:
 		cout << "\nthe popped element is: " << endl; //step 2
 		top--; //step 3 decrement
 	}
+
+	//method for check if data is empty
+	bool empty() {
+		return (top == -1);
+	}
 };
