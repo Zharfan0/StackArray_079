@@ -23,7 +23,7 @@ public:
 		top++; //step 2
 		stack_array[top] = element; //step3
 		cout << endl;
-		cout << element << "ditambahkan(pushed)" << endl;
+		cout << element << " ditambahkan(pushed)" << endl;
 
 		return element;
 	}
@@ -42,4 +42,75 @@ public:
 	bool empty() {
 		return (top == -1);
 	}
+
+	void display() {
+		if (empty()) {
+			cout << "\nstack is empty. " << endl;
+		}
+		else {
+			for (int tmp = top; tmp >= 0; tmp--) {
+				cout << stack_array[tmp] << endl;
+			}
+		}
+	}
 };
+
+int main() {
+	StackArray stack;
+	int data;
+	char ch;
+	while (1)
+	{
+		cout << endl << "Menu";
+		cout << endl << "1. Menambah data ke dalam list" << endl;
+		cout << "2. Menghapus data dari dalam list" << endl;
+		cout << "3. Menampilkan semua data di dalam list" << endl;
+		cout << "4. Keluar" << endl;
+		cout << endl << "Masukan pilihan (1-5): ";
+		cin >> ch;
+		switch (ch)
+		{
+		case '1':
+		{
+			int element;
+			cout << "enter the element:" << endl;
+			cin >> element;
+			stack.push(element);
+		}
+		break;
+		case '2':
+		{
+			if (stack.empty())
+			{
+				cout << endl << "List Kosong" << endl;
+				break;
+			}
+			cout << endl << "\nMasukan no yang akan dihapus: ";
+			cin >> data;
+			if (data == false)
+				cout << endl << "Data tidak ditemukan" << endl;
+			else
+				stack.pop();
+				cout << endl << "Data dengan nomor " << data << "berhasil dihapus" << endl;
+		}
+		break;
+		case '3':
+		{
+			stack.display();
+		}
+		break;
+
+		case '4':
+		{
+			exit(0);
+		}
+		break;
+		default:
+		{
+			cout << "Pilihan salah !!!" << endl;
+		}
+		break;
+		}
+
+	}
+}
