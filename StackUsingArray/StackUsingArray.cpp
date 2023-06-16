@@ -85,13 +85,8 @@ int main() {
 				cout << endl << "List Kosong" << endl;
 				break;
 			}
-			cout << endl << "\nMasukan no yang akan dihapus: ";
-			cin >> data;
-			if (data == false)
-				cout << endl << "Data tidak ditemukan" << endl;
 			else
 				stack.pop();
-				cout << endl << "Data dengan nomor " << data << "berhasil dihapus" << endl;
 		}
 		break;
 		case '3':
